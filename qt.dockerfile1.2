@@ -10,6 +10,8 @@ RUN pip install --quiet jupyterlab==1.2.5
 #install python packages
 RUN pip install --quiet matplotlib==3.1.2 seaborn==0.10.0 pandas==0.22 quandl==3.4.8 pandas-datareader==0.8.0 statsmodels==0.11.0 pymc3==3.8 nodejs==0.1.0
 
+RUN pip install --quiet pykalman==0.9.5 scikit-learn==0.22.1 imbalanced-learn==0.6.2 lightgbm==2.3.1 plotly==4.5.2 xgboost==0.90 eli5==0.10.1 shap==0.34.0 mlxtend==0.17.2 catboost==0.21 ipywidgets==7.4.2
+
 RUN mkdir -p /home/xianhe && chmod 1777 /home/xianhe
 ENV HOME /home/xianhe
 # Define working directory.
