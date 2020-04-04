@@ -7,4 +7,4 @@ apt-get install -y --no-install-recommends libatlas-base-dev gfortran pkg-config
 RUN pip install --quiet --upgrade pip
 RUN pip install --quiet numpy==1.17.4
 RUN pip uninstall -y enum34
-RUN pip install --quiet zipline
+RUN pip install --quiet zipline==1.3.0
