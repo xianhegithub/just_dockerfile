@@ -5,7 +5,8 @@ FROM $BASE_CONTAINER
 RUN apt-get update && \
 apt-get install -y --no-install-recommends libatlas-base-dev
 RUN apt-get install -y --no-install-recommends gfortran
-RUN apt-get install -y --no-install-recommends pkg-config libfreetype6-dev python-dev
+RUN apt-get install -y --no-install-recommends pkg-config libfreetype6-dev
 RUN pip install --quiet --upgrade pip
 RUN pip install --quiet numpy==1.16.0
+pip uninstall -y enum34
 RUN pip install --quiet zipline
