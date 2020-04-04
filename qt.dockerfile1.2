@@ -6,3 +6,6 @@ RUN pip install --quiet numpy==1.17.4
 RUN pip uninstall -y enum34
 RUN pip install --quiet zipline==1.3.0
 RUN pip install --quiet jupyterlab==1.2.5
+
+# jupyter notebook
+EXPOSE 8888
