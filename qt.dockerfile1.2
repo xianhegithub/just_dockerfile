@@ -4,12 +4,7 @@ FROM $BASE_CONTAINER
 
 RUN apt-get update && \
 apt-get install -y --no-install-recommends libatlas-base-dev
-RUN apt-get install -y --no-install-recommends \
-fonts-dejavu \
-unixodbc \
-unixodbc-dev \
-r-cran-rodbc \
-gfortran
+RUN apt-get install -y --no-install-recommends gfortran
 RUN pip install --quiet --upgrade pip
 RUN pip install --quiet numpy==1.16.0
 RUN pip install --quiet zipline
