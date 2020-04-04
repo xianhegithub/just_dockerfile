@@ -1,7 +1,9 @@
 ARG BASE_CONTAINER=tensorflow/tensorflow:2.1.0-gpu-py3-jupyter
 FROM $BASE_CONTAINER
 
-RUN apt-get install -y --no-install-recommends libatlas-base-dev
+
+RUN apt-get update && \
+apt-get install -y --no-install-recommends libatlas-base-dev
 RUN apt-get install -y --no-install-recommends \
 fonts-dejavu \
 unixodbc \
