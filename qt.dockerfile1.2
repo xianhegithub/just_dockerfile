@@ -17,6 +17,7 @@ RUN pip install --quiet jupyterlab==1.2.5
 
 RUN mkdir -p /home/xianhe && chmod 1777 /home/xianhe
 ENV HOME /home/xianhe
+RUN cd /home/xianhe
 
 # jupyter notebook
 EXPOSE 8888
