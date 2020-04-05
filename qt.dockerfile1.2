@@ -1,5 +1,9 @@
 ARG BASE_CONTAINER=adegtyarev/zipline:debian-jupyterlab
 FROM $BASE_CONTAINER
 
+USER    root
+
 RUN mkdir -p /home/xianhe && chmod 1777 /home/xianhe
 WORKDIR /home/xianhe
+
+USER    $ZIPLINE_USER
