@@ -15,6 +15,8 @@ RUN pip install --quiet pykalman==0.9.5 scikit-learn==0.22.1 imbalanced-learn==0
 RUN curl -O -L http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
 RUN tar -xzf ta-lib-0.4.0-src.tar.gz
 RUN cd ta-lib/
+RUN ./configure --prefix=/usr/local
+RUN make
 RUN make install
 RUN cd ~
 
