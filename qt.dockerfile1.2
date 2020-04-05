@@ -12,7 +12,14 @@ RUN pip install --quiet matplotlib==3.1.2 seaborn==0.10.0 pandas==0.22 quandl==3
 
 RUN pip install --quiet pykalman==0.9.5 scikit-learn==0.22.1 imbalanced-learn==0.6.2 lightgbm==2.3.1 plotly==4.5.2 xgboost==0.90 eli5==0.10.1 shap==0.34.0 ipywidgets==7.4.2
 
-RUN apt install python3.6-dev
+RUN curl -O -L http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
+RUN tar -xzf ta-lib-0.4.0-src.tar.gz
+RUN cd ta-lib/
+RUN ./configure --prefix=/usr
+RUN make
+RUN make install
+RUN cd ~
+
 RUN pip install --quiet TA-lib
 
 RUN mkdir -p /home/xianhe && chmod 1777 /home/xianhe
