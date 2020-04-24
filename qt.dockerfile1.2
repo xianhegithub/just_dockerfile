@@ -1,9 +1,0 @@
-ARG BASE_CONTAINER=quantrocket/zipline:latest
-FROM $BASE_CONTAINER
-
-USER    root
-
-RUN mkdir -p /home/xianhe && chmod 1777 /home/xianhe
-WORKDIR /home/xianhe
-
-USER    $ZIPLINE_USER
