@@ -12,4 +12,5 @@ RUN pip install matplotlib
 RUN pip install seaborn
 RUN pip install PyQt5
 RUN pip install gym
+RUN pip install 'gym[atari]'
 
