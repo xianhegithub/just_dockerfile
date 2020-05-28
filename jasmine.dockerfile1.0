@@ -11,3 +11,5 @@ RUN pip install jupyterlab
 RUN pip install matplotlib
 RUN pip install seaborn
 RUN pip install PyQt5
+RUN pip install gym
+
