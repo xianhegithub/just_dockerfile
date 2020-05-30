@@ -13,4 +13,4 @@ RUN pip install seaborn
 RUN pip install PyQt5
 RUN pip install gym
 RUN pip install 'gym[atari]'
-RUN pip install opencv-contrib-python
+RUN pip install opencv-python
