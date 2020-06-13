@@ -16,3 +16,5 @@ RUN pip install 'gym[atari]'
 
 RUN apt-get install -y libsm6 libxext6 libxrender-dev
 RUN pip install opencv-python
+RUN pip install cython
+RUN pip install POT
