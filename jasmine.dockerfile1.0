@@ -30,3 +30,6 @@ RUN mkdir -p ~/.mujoco \
     && mv ~/.mujoco/mujoco200_linux ~/.mujoco/mujoco200 \
     && rm mujoco.zip
 COPY mjkey.txt ~/.mujoco/
+
+COPY vendor/Xdummy /usr/local/bin/Xdummy
+RUN chmod +x /usr/local/bin/Xdummy
