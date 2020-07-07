@@ -19,6 +19,11 @@ RUN pip install opencv-python
 RUN pip install cython
 RUN pip install POT
 RUN pip install mujoco-py==2.0.2.10
+
+RUN apt-get update -q \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    wget
+    
 RUN mkdir -p ~/.mujoco \
     && wget https://www.roboti.us/download/mujoco200_linux.zip -O mujoco.zip \
     && unzip mujoco.zip -d ~/.mujoco \
