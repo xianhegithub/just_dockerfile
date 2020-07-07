@@ -48,4 +48,4 @@ RUN pip install --no-cache-dir -r requirements.dev.txt
 ENTRYPOINT ["/mujoco_py/vendor/Xdummy-entrypoint"]
 CMD ["pytest"]
 COPY . /mujoco_py
-RUN python setup.py install
+RUN python ~/mujoco_py/setup.py install
